@@ -7,10 +7,10 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int a = 1;
+        int a = 0;
         do {
             int random = GenRandomNumber();
-            System.out.print("Input a number from 1 to 10: ");
+            System.out.print("Guess a number from 1 to 10: ");
             int guesser = scanner.nextInt();
 
             if (guesser >= 1 && guesser <= 10) {
@@ -20,15 +20,15 @@ public class Main {
                     }
                 }
                 if (random != guesser) {
-                    System.out.println("Wrong guess");
-                    System.out.println("The number was " + random);
+                    System.out.println("Incorrect!");
+                    System.out.println("Sorry! The randomly generated number was " + random);
                 }
                 if (random == guesser) {
-                    System.out.println("Congratulation, You Beat The System");
+                    System.out.println("Congratulation! You did the unthinkable.);
                     break;
                 }
             } else {
-                System.out.println("The number you entered was out of range");
+                System.out.println("Out of Range! Enter a number between 1 to 10");
             }
             System.out.println();
             System.out.print("Enter \"1\" to play again: ");
